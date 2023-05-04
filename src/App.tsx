@@ -1,7 +1,9 @@
+import { Header } from "./components/Header";
+
 export function App() {
   return (
     <>
-      <h1 className="text-lg">Hello!</h1>
+      <Header />
     </>
   );
 }
