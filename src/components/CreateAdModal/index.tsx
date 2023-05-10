@@ -3,6 +3,7 @@ import * as Checkbox from "@radix-ui/react-checkbox";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
 import { FormEvent, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { Games } from "../../App";
 import { api } from "../../services/api";
 import { Input } from "../Input";
@@ -36,10 +37,10 @@ export const CreateAdModal = () => {
         hourEnd: data.hourEnd,
         useVoiceChannel: useVoiceChannel,
       });
-      alert("Anúncio criado com sucesso!");
+      toast.dark("Anúncio criado com sucesso na APi!");
     } catch (error) {
       console.log(error);
-      alert("Erro ao criar o anúncio!");
+      toast.dark("Erro ao criar o anúncio!");
     }
   };
 
